@@ -1,0 +1,246 @@
+/* Use a creative font (example: 'Roboto Slab', serif) */
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    color: #00ffcc; /* Neon green text color */
+    background-color: #1a1a1a; /* Greyish black background */
+  }
+  
+  /* Overall container for the platform */
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+  }
+  
+  /* Header section */
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header img.logo {
+    max-height: 80px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 8px #00ffcc); /* Neon green glow effect for the logo */
+  }
+  
+  .header nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  #symbol {
+    width: 200px;
+  }
+  
+  #product {
+    width: 200px;
+  }
+  
+  #expiry {
+    width: 200px;
+  }
+  
+  #optionType {
+    width: 200px;
+  }
+  
+  #strikePrice {
+    width: 200px;
+  }
+  
+  #lots {
+    width: 182px;
+  }
+  #Quantity {
+    width: 200px  !important; /* Set the desired width for the quantity input element */
+  }
+  .header nav a {
+    color: #00ffcc; /* Neon green color for links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Main content area */
+  .main-content {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .exchange-buttons {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .exchange-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exchange-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .input-group {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 8px;
+    border: 1px solid #00ffcc; /* Neon green border for inputs */
+    border-radius: 4px;
+    width: 100%;
+    color: #00ffcc; /* Neon green text color for inputs */
+    background-color: #222; /* Dark grey background for inputs */
+  }
+  
+  .buy-sell-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Change to flex-start to align to the left */
+}
+
+  
+  
+  .buy-sell-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+  
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-sell-button:hover {
+    background-color: #1e7e34;
+  }
+ /* Styles for all buttons when they are pressed */
+ .exchange-button:hover,
+ .buy-sell-button:hover,
+ .buttons2:active {
+   background-color:  #1a1a1a;
+   border-radius: 50%; /* add rounded borders */
+ }
+ 
+ /* Add custom styles for "Add" and "Reset" buttons when pressed */
+ .buttons2.addbutton:active {
+   background-color:  #1a1a1a !important;
+   color: #00ffcc !important;
+   transform: translateY(2px);
+   box-shadow: 0 0 6px rgba(0, 0, 255, 0.3);
+   border-radius: 50%; /* add rounded borders */
+ }
+ 
+ .buttons2.resetbutton:active {
+   background-color: #dc3545 !important;
+   color: #00ffcc !important;
+   transform: translateY(2px);
+   box-shadow: 0 0 6px rgba(220, 53, 69, 0.3);
+   border-radius: 50%; /* add rounded borders */
+ }
+ 
+  /* Margin requirements section */
+  .margin-requirements {
+    margin-bottom: 40px;
+  }
+  
+  .margin-details {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .margin-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  
+  .margin-item span:first-child {
+    font-weight: bold;
+  }
+  
+  .margin-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Add a gap of 20px between the table and other elements */
+  }
+  
+  .margin-details-table th,
+  .margin-details-table td {
+    gap: 10 px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #00ffcc; /* Neon green border for table */
+  }
+  
+  .margin-details-table th {
+    background-color: #222; /* Dark grey background for table header */
+    color: #00ffcc; /* Neon green color for table header text */
+  }
+  
+  /* Footer section */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+  
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .header nav {
+        flex-direction: column;
+    }
+  
+    .exchange-buttons {
+        grid-template-columns: 1fr;
+    }
+  
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+  
+    .buy-sell-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: left;
+        margin-left: 50px; /* Adjust this value as needed */
+    }
+  }
+  
